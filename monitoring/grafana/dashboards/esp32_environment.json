@@ -1,0 +1,33 @@
+{
+  "uid": "esp32-env",
+  "title": "ESP32 Environment Monitor",
+  "timezone": "browser",
+  "schemaVersion": 38,
+  "version": 1,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Temperature (°C)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "esp32_temperature_celsius",
+          "legendFormat": "Temperature"
+        }
+      ],
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 }
+    },
+    {
+      "type": "timeseries",
+      "title": "Humidity (%)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "esp32_humidity_percent",
+          "legendFormat": "Humidity"
+        }
+      ],
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 }
+    }
+  ]
+}
